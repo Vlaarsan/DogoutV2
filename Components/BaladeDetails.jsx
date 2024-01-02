@@ -13,7 +13,7 @@ import {
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { parseISO } from "date-fns";
-import { firestore, app, auth } from "../config/firebaseconfig";
+import { auth, app, firestore } from "../Config/firebaseconfig";
 import {
   collection,
   addDoc,

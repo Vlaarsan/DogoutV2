@@ -19,7 +19,7 @@ import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import Balade from "../Components/Balade";
-import { firestore, app, auth } from "../config/firebaseconfig";
+import { auth, app, firestore } from "../Config/firebaseconfig";
 import { collection, addDoc, getDocs, getDoc, doc, deleteDoc } from "firebase/firestore";
 import { useUser } from "../Contexts/UserContext";
 import { useUserDogs } from "../Contexts/UserDogs";

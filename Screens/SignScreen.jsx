@@ -17,7 +17,7 @@ import {
   getAuth,
   sendEmailVerification,
 } from "firebase/auth";
-import app from "../config/firebaseconfig";
+import { app } from "../Config/firebaseconfig";
 
 export default function SignUpScreen() {
   ///////////////////////////////////////////////////////////////////////////////////////////////

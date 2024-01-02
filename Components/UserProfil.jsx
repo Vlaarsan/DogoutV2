@@ -7,7 +7,7 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-import { firestore, app, auth } from "../config/firebaseconfig";
+import { auth, app, firestore } from "../Config/firebaseconfig";
 import {
   collection,
   addDoc,

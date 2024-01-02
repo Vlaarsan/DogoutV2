@@ -5,7 +5,7 @@ import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { useNavigation } from "@react-navigation/native";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
-import { firestore, app, auth } from "../config/firebaseconfig";
+import { auth, app, firestore } from "../Config/firebaseconfig";
 import { doc, getDoc } from "firebase/firestore";
 import { useUser } from "../Contexts/UserContext";
 import { useUserDogs } from "../Contexts/UserDogs";
@@ -89,8 +89,8 @@ export default function Balade({
           <FontAwesome
             name="paw"
             size={16}
-            color="green"
-            style={{ position: "absolute", top: -1, right: 0 }}
+            color="black"
+            style={{ position: "absolute", top: -1, right: -1 }}
           />
         )}
       </Marker>

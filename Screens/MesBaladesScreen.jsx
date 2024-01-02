@@ -19,7 +19,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { useUser } from "../Contexts/UserContext";
-import { firestore, app, auth } from "../config/firebaseconfig";
+import { auth, app, firestore } from "../Config/firebaseconfig";
 import { toDate, format } from "date-fns";
 import { fr } from "date-fns/locale";
 import SelectDropdown from "react-native-select-dropdown";

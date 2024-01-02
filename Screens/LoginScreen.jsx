@@ -13,7 +13,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { auth } from "../config/firebaseconfig";
+import { auth} from "../Config/firebaseconfig";
 
 export default function LoginScreen() {
   ///////////////////////////////////////////////////////////////////////////////////////////////

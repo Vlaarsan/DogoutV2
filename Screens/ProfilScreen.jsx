@@ -12,7 +12,7 @@ import {
   TextInput,
   Alert,
 } from "react-native";
-import { auth, app, firestore } from "../config/firebaseconfig";
+import { auth, app, firestore } from "../Config/firebaseconfig";
 import { doc, setDoc, getDoc, deleteDoc, updateDoc } from "firebase/firestore";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useUser } from "../Contexts/UserContext";
