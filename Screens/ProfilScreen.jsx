@@ -1047,7 +1047,8 @@ const styles = StyleSheet.create({
   modalContainer: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.9)", // Fond semi-transparent noir
+    backgroundColor: "#111",
+    opacity: 1,
     paddingHorizontal: 20,
   },
   modalTitle: {
