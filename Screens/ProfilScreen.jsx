@@ -1047,7 +1047,7 @@ const styles = StyleSheet.create({
   modalContainer: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "#111",
+    backgroundColor: "#222",
     opacity: 1,
     paddingHorizontal: 20,
   },

@@ -654,9 +654,9 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   modalContent: {
-    backgroundColor: "#333",
-    padding: 20,
-    borderRadius: 10,
+    backgroundColor: "#222",
+    padding: 10,
+    height: "100%",
   },
   modalTitle: {
     fontSize: 24,
@@ -672,7 +672,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#158FC3",
     padding: 10,
-    marginBottom: 10,
+    marginBottom: 15,
     borderRadius: 5,
   },
   inputInfo: {
@@ -701,7 +701,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
     alignItems: "center",
-    marginBottom: 20,
+    marginBottom: 60,
   },
   closeButton: {
     marginTop: 15,

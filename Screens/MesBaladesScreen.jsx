@@ -355,23 +355,23 @@ const MesBaladesScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#222",
+    backgroundColor: "#333",
   },
   sectionContainer: {
     marginTop: 50,
   },
   baladeItem: {
     backgroundColor: "#158FC3",
-    borderRadius: 30,
+    borderRadius: 10,
     marginBottom: 20,
     padding: 5,
     width: "90%",
     alignSelf: "center",
   },
   baladeName: {
-    fontSize: 19,
+    fontSize: 20,
     fontWeight: "bold",
-    marginBottom: 15,
+    marginBottom: 20,
     color: "#000",
     textAlign: "center",
   },
@@ -394,7 +394,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "rgba(3, 3, 3, 0.5)",
   },
   modalContent: {
     backgroundColor: "#222",
