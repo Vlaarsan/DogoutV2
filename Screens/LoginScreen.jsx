@@ -13,7 +13,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { auth} from "../Config/firebaseconfig";
+import { auth } from "../Config/firebaseconfig";
 
 export default function LoginScreen() {
   ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -111,7 +111,8 @@ export default function LoginScreen() {
   return (
     <KeyboardAvoidingView
       style={styles.container}
-      keyboardVerticalOffset={200} // Ajustez cette valeur en fonction de votre mise en page
+      behavior={"padding"}
+      keyboardVerticalOffset= {200}
     >
       {/* Titre */}
       <View style={styles.titleContainer}>
