@@ -173,6 +173,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontStyle: "italic",
     marginVertical: 5,
+    width: 91,
   },
 
   genderIconModal: {
