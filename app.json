@@ -21,13 +21,19 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#333"
-      }
+      },
+      "package": "com.vlaar.Dogout"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-localization"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ce8ac7f4-6771-4c22-abdc-bc139c1be0f6"
+      }
+    }
   }
 }
