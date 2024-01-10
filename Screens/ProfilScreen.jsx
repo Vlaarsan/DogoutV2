@@ -398,7 +398,7 @@ export default function ProfilScreen() {
   const age = [
     "Inférieur à 6 mois",
     "Entre 6 mois et 1 an",
-    "1 ans",
+    "1 an",
     "2 ans",
     "3 ans",
     "4 ans",
