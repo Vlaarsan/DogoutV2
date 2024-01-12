@@ -28,6 +28,7 @@ import { AntDesign } from "@expo/vector-icons";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import { NavigationContainer } from "@react-navigation/native";
 import BaladeDetails from "../Components/BaladeDetails";
+import HelpText from "../Divers/HelpText";
 
 export default function MapScreen({ navigation }) {
   ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -539,6 +540,8 @@ export default function MapScreen({ navigation }) {
           </Modal>
         </View>
       )}
+
+      <HelpText/>
 
       {/* Bouton de rafraîchissement */}
       <TouchableOpacity style={styles.refreshButton} onPress={loadBalades}>
