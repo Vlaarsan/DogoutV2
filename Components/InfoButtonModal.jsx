@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Modal, TouchableOpacity, TouchableWithoutFeedback } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Modal,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+} from "react-native";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Icon from "react-native-vector-icons/Ionicons";
 
@@ -22,7 +29,7 @@ const InfoButtonModal = () => {
         onRequestClose={() => setModalVisible(false)}
       >
         <TouchableWithoutFeedback onPress={() => setModalVisible(false)}>
-        <View style={styles.modalContainer}>
+          <View style={styles.modalContainer}>
             <View style={styles.modalContent}>
               <Text>
                 Vous participez à cette balade si vous voyez cet icône sur la
@@ -52,7 +59,7 @@ const InfoButtonModal = () => {
                 <Text>Fermer</Text>
               </TouchableOpacity>
             </View>
-        </View>
+          </View>
         </TouchableWithoutFeedback>
       </Modal>
     </View>
