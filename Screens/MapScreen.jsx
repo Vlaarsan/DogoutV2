@@ -36,6 +36,7 @@ import FontAwesome from "react-native-vector-icons/FontAwesome";
 import { NavigationContainer } from "@react-navigation/native";
 import BaladeDetails from "../Components/BaladeDetails";
 import HelpText from "../Divers/HelpText";
+import { durations, avatarImages } from "../Constants/Constants";
 
 export default function MapScreen({ navigation }) {
   ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -63,90 +64,7 @@ export default function MapScreen({ navigation }) {
 
   const [loading, setLoading] = useState();
 
-  const avatarImages = [
-    require("../assets/images/Logoapp.png"),
-    require("../assets/images/AkitaAmericain.png"),
-    require("../assets/images/Akita.png"),
-    require("../assets/images/AmericanStaffordshireTerrier.png"),
-    require("../assets/images/AmericanStaffordshireTerriergris.png"),
-    require("../assets/images/AmericanStaffordshireTerrierBringé.png"),
-    require("../assets/images/Barbet.png"),
-    require("../assets/images/Barbetnoir.png"),
-    require("../assets/images/Basenji.png"),
-    require("../assets/images/Bauceron.png"),
-    require("../assets/images/Beagle.png"),
-    require("../assets/images/BergerAllemand.png"),
-    require("../assets/images/BergerAustralien.png"),
-    require("../assets/images/BergerBelge.png"),
-    require("../assets/images/BergerBelgenoir.png"),
-    require("../assets/images/BergerBlancSuisse.png"),
-    require("../assets/images/BichonMaltais.png"),
-    require("../assets/images/BorderCollie.png"),
-    require("../assets/images/BouledogueAnglais.png"),
-    require("../assets/images/Bouledoguefrançais.png"),
-    require("../assets/images/Boxer.png"),
-    require("../assets/images/BraquedeWeimar.png"),
-    require("../assets/images/Bullmastiff.png"),
-    require("../assets/images/BullTerrier.png"),
-    require("../assets/images/CaneCorso.png"),
-    require("../assets/images/Caniche.png"),
-    require("../assets/images/Carlin.png"),
-    require("../assets/images/CavalierKingCharlesSpaniel.png"),
-    require("../assets/images/LabradorChocolat.png"),
-    require("../assets/images/Beagle.png"),
-    require("../assets/images/HuskySibérien.png"),
-    require("../assets/images/Malamute.png"),
-    require("../assets/images/Basenji.png"),
-    require("../assets/images/Yorkshire.png"),
-    require("../assets/images/Chihuahua.png"),
-    require("../assets/images/ChowChow.png"),
-    require("../assets/images/ChowChownoir.png"),
-    require("../assets/images/Cocker.png"),
-    require("../assets/images/Dalmatien.png"),
-    require("../assets/images/Doberman.png"),
-    require("../assets/images/DogueAllemand.png"),
-    require("../assets/images/DogueAllemandblanc.png"),
-    require("../assets/images/GoldenRetriever.png"),
-    require("../assets/images/GoldenRetrieverroux.png"),
-    require("../assets/images/HuskySibérien.png"),
-    require("../assets/images/JackRussell.png"),
-    require("../assets/images/Labrador.png"),
-    require("../assets/images/LabradorChocolat.png"),
-    require("../assets/images/Labradornoir.png"),
-    require("../assets/images/Malamute.png"),
-    require("../assets/images/Malinois.png"),
-    require("../assets/images/Pinscher.png"),
-    require("../assets/images/Pitbull.png"),
-    require("../assets/images/Pitbullbrun.png"),
-    require("../assets/images/Rottweiler.png"),
-    require("../assets/images/ShibaInu.png"),
-    require("../assets/images/ShihTzu.png"),
-    require("../assets/images/Teckel.png"),
-    require("../assets/images/Teckelnoir.png"),
-    require("../assets/images/TerreNeuve.png"),
-    require("../assets/images/Yorkshire.png"),
-    require("../assets/images/AmericanStaffordshireTerrier.png"),
-    require("../assets/images/AmericanStaffordshireTerriergris.png"),
-    require("../assets/images/AmericanStaffordshireTerrierBringé.png"),
-    require("../assets/images/Caniche.png"),
-  ];
 
-  const durations = [
-    "Indéterminée",
-    "10 min",
-    "20 min",
-    "30 min",
-    "40 min",
-    "50 min",
-    "1h",
-    "1h30",
-    "2h",
-    "2h30",
-    "3h",
-    "3h30",
-    "4h",
-    "Journée",
-  ];
 
   ///////////////////////////////////////////////////////////////////////////////////////////////
   //                                           @FONCTIONS

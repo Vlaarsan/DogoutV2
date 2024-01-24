@@ -16,6 +16,7 @@ import { auth, app, firestore } from "../Config/firebaseconfig";
 import { doc, setDoc, getDoc, deleteDoc, updateDoc } from "firebase/firestore";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useUser } from "../Contexts/UserContext";
+import { ages, race, couleur, gender, avatars } from "../Constants/Constants";
 
 export default function ProfilScreen() {
   ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -247,190 +248,6 @@ export default function ProfilScreen() {
   const dogImage =
     dogImages[newDogInfo.race]?.[newDogInfo.color] ||
     dogImages[newDogInfo.race]?.default;
-
-  const avatars = [
-    require("../assets/images/Logoapp.png"),
-    require("../assets/images/AkitaAmericain.png"),
-    require("../assets/images/Akita.png"),
-    require("../assets/images/AmericanStaffordshireTerrier.png"),
-    require("../assets/images/AmericanStaffordshireTerriergris.png"),
-    require("../assets/images/AmericanStaffordshireTerrierBringé.png"),
-    require("../assets/images/Barbet.png"),
-    require("../assets/images/Barbetnoir.png"),
-    require("../assets/images/Basenji.png"),
-    require("../assets/images/Bauceron.png"),
-    require("../assets/images/Beagle.png"),
-    require("../assets/images/BergerAllemand.png"),
-    require("../assets/images/BergerAustralien.png"),
-    require("../assets/images/BergerBelge.png"),
-    require("../assets/images/BergerBelgenoir.png"),
-    require("../assets/images/BergerBlancSuisse.png"),
-    require("../assets/images/BichonMaltais.png"),
-    require("../assets/images/BorderCollie.png"),
-    require("../assets/images/BouledogueAnglais.png"),
-    require("../assets/images/Bouledoguefrançais.png"),
-    require("../assets/images/Boxer.png"),
-    require("../assets/images/BraquedeWeimar.png"),
-    require("../assets/images/Bullmastiff.png"),
-    require("../assets/images/BullTerrier.png"),
-    require("../assets/images/CaneCorso.png"),
-    require("../assets/images/Caniche.png"),
-    require("../assets/images/Carlin.png"),
-    require("../assets/images/CavalierKingCharlesSpaniel.png"),
-    require("../assets/images/LabradorChocolat.png"),
-    require("../assets/images/Beagle.png"),
-    require("../assets/images/HuskySibérien.png"),
-    require("../assets/images/Malamute.png"),
-    require("../assets/images/Basenji.png"),
-    require("../assets/images/Yorkshire.png"),
-    require("../assets/images/Chihuahua.png"),
-    require("../assets/images/ChowChow.png"),
-    require("../assets/images/ChowChownoir.png"),
-    require("../assets/images/Cocker.png"),
-    require("../assets/images/Dalmatien.png"),
-    require("../assets/images/Doberman.png"),
-    require("../assets/images/DogueAllemand.png"),
-    require("../assets/images/DogueAllemandblanc.png"),
-    require("../assets/images/GoldenRetriever.png"),
-    require("../assets/images/GoldenRetrieverroux.png"),
-    require("../assets/images/HuskySibérien.png"),
-    require("../assets/images/JackRussell.png"),
-    require("../assets/images/Labrador.png"),
-    require("../assets/images/LabradorChocolat.png"),
-    require("../assets/images/Labradornoir.png"),
-    require("../assets/images/Malamute.png"),
-    require("../assets/images/Malinois.png"),
-    require("../assets/images/Pinscher.png"),
-    require("../assets/images/Pitbull.png"),
-    require("../assets/images/Pitbullbrun.png"),
-    require("../assets/images/Rottweiler.png"),
-    require("../assets/images/ShibaInu.png"),
-    require("../assets/images/ShihTzu.png"),
-    require("../assets/images/Teckel.png"),
-    require("../assets/images/Teckelnoir.png"),
-    require("../assets/images/TerreNeuve.png"),
-    require("../assets/images/Yorkshire.png"),
-    require("../assets/images/AmericanStaffordshireTerrier.png"),
-    require("../assets/images/AmericanStaffordshireTerriergris.png"),
-    require("../assets/images/AmericanStaffordshireTerrierBringé.png"),
-    require("../assets/images/Caniche.png"),
-
-    // Ajoutez d'autres avatars ici...
-  ];
-
-  const gender = ["Mâle", "Femelle"];
-
-  {
-    /* Toutes les races de chiens*/
-  }
-  const race = [
-    "Akita Americain",
-    "Akita Inu",
-    "American Staffordshire Terrier",
-    "Barbet",
-    "Basenji",
-    "Bauceron",
-    "Basset Hound", // Beagle image
-    "Beagle",
-    "Berger Allemand",
-    "Berger Australien",
-    "Berger Belge",
-    "Berger Blanc Suisse",
-    "Berger des Pyrénées",
-    "Bichon Maltais",
-    "Border Collie",
-    "Bouledogue français",
-    "Bouledogue américain", // Bouledogue français image
-    "Bouledogue anglais",
-    "Boxer",
-    "Braque allemand",
-    "Braque de Weimar",
-    "Bull Terrier",
-    "Bullmastiff",
-    "Cane Corso",
-    "Caniche",
-    "Carlin",
-    "Cavalier King Charles Spaniel",
-    "Chesapeake Bay Retriever", // Labrador chocolat image
-    "Chien de Saint-Hubert",
-    "Chien du Groenland",
-    "Chihuahua",
-    "Chien finnois de Laponie",
-    "Chien norvégien de Macareux",
-    "Chow-Chow",
-    "Cocker",
-    "Dalmatien",
-    "Doberman",
-    "Dogue allemand",
-    "Golden Retriever",
-    "Husky Sibérien",
-    "Jack Russell",
-    "Labrador Retriever",
-    "Malamute",
-    "Pékinois",
-    "Pinscher",
-    "Pitbull",
-    "Rottweiler",
-    "Shiba Inu",
-    "Shih Tzu",
-    "Teckel",
-    "Staffordshire Bull Terrier",
-    "Terre-Neuve",
-    "West Highland White Terrier",
-    "Yorkshire Terrier",
-  ];
-
-  const couleur = [
-    "Noir",
-    "Blanc",
-    "Chocolat",
-    "Brun",
-    "Beige",
-    "Gris",
-    "Roux",
-    "Fauve",
-    "Crème",
-    "Sable",
-    "Doré",
-    "Bringé",
-  ];
-
-  const age = [
-    "Inférieur à 6 mois",
-    "Entre 6 mois et 1 an",
-    "1 an",
-    "2 ans",
-    "3 ans",
-    "4 ans",
-    "5 ans",
-    "6 ans",
-    "7 ans",
-    "8 ans",
-    "9 ans",
-    "10 ans",
-    "11 ans",
-    "12 ans",
-    "13 ans",
-    "14 ans",
-    "15 ans",
-    "16 ans",
-    "17 ans",
-    "18 ans",
-    "19 ans",
-    "20 ans",
-    "21 ans",
-    "22 ans",
-    "23 ans",
-    "24 ans",
-    "25 ans",
-    "26 ans",
-    "27 ans",
-    "28 ans",
-    "29 ans",
-    "30 ans",
-  ];
-
-
 
   ///////////////////////////////////////////////////////////////////////////////////////////////
   //                                           @FONCTIONS
@@ -752,7 +569,7 @@ export default function ProfilScreen() {
             defaultButtonText="Couleur" // Style du texte de chaque élément de la liste déroulante
           />
           <SelectDropdown
-            data={age}
+            data={ages}
             onSelect={(selectedItem, index) => {
               setNewDogInfo({ ...newDogInfo, age: selectedItem });
             }}

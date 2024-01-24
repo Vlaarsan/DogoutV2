@@ -10,6 +10,7 @@ import {
   Alert,
   TextInput,
 } from "react-native";
+import { ages } from "../Constants/Constants";
 
 export default function Chien({
   name,
@@ -35,41 +36,6 @@ export default function Chien({
   const toggleEditModal = () => {
     setEditModalVisible(!isEditModalVisible);
   };
-
-  const ages = [
-    "Inférieur à 6 mois",
-    "Entre 6 mois et 1 an",
-    "1 ans",
-    "2 ans",
-    "3 ans",
-    "4 ans",
-    "5 ans",
-    "6 ans",
-    "7 ans",
-    "8 ans",
-    "9 ans",
-    "10 ans",
-    "11 ans",
-    "12 ans",
-    "13 ans",
-    "14 ans",
-    "15 ans",
-    "16 ans",
-    "17 ans",
-    "18 ans",
-    "19 ans",
-    "20 ans",
-    "21 ans",
-    "22 ans",
-    "23 ans",
-    "24 ans",
-    "25 ans",
-    "26 ans",
-    "27 ans",
-    "28 ans",
-    "29 ans",
-    "30 ans",
-  ];
 
   ///////////////////////////////////////////////////////////////////////////////////////////////
   //                                           @FONCTIONS
