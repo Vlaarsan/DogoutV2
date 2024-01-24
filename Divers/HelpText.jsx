@@ -8,7 +8,7 @@ const HelpText = () => {
     setIsVisible(true);
     setTimeout(() => {
       setIsVisible(false);
-    }, 30000);
+    }, 20000);
   }, []);
 
   return isVisible ? (
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     position: "absolute",
     top: 150,
-    left: "9%",
+    left: 5,
     fontSize: 13,
     fontWeight: "bold",
     backgroundColor: "#158FC3",

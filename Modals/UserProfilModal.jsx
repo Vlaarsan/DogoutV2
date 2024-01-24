@@ -167,9 +167,9 @@ dogName: {
 },
 closeButton: {
   backgroundColor: "#158FC3",
-  padding: 15,
+  padding: 10,
   borderRadius: 10,
-  marginTop: 20,
+  marginTop: 5,
   alignSelf: "center",
 },
 closeButtonText: {
