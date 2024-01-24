@@ -25,6 +25,7 @@ import {
 import { useUser } from "../Contexts/UserContext";
 import Icon from "react-native-vector-icons/Ionicons";
 import DogInfoModal from "../Modals/DogInfoModal";
+import InfoButtonModal from "./InfoButtonModal";
 
 export default function BaladeDetails({ route }) {
   ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -253,13 +254,9 @@ export default function BaladeDetails({ route }) {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.refreshButton} onPress={loadParticipants}>
-        <Icon
-          name="refresh-outline"
-          size={20}
-          color="#000"
-          style={styles.refreshIcon}
-        />
+        <Icon name="refresh-outline" size={20} color="#000" />
       </TouchableOpacity>
+      <InfoButtonModal />
 
       <Text style={styles.pseudo}>Balade créee par {pseudo}</Text>
       <Text style={styles.name}>{name}</Text>
@@ -529,8 +526,8 @@ const styles = StyleSheet.create({
     right: 5,
   },
   refreshButton: {
-    padding: 5, // Ajoute un rembourrage interne
-    backgroundColor: "lightgreen", // Ajoute une couleur de fond
+    padding: 5,
+    backgroundColor: "lightgreen",
     position: "absolute",
     top: 10,
     right: 10,

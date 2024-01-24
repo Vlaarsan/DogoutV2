@@ -20,7 +20,14 @@ import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import Balade from "../Components/Balade";
 import { auth, app, firestore } from "../Config/firebaseconfig";
-import { collection, addDoc, getDocs, getDoc, doc, deleteDoc } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  getDocs,
+  getDoc,
+  doc,
+  deleteDoc,
+} from "firebase/firestore";
 import { useUser } from "../Contexts/UserContext";
 import { useUserDogs } from "../Contexts/UserDogs";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -541,7 +548,7 @@ export default function MapScreen({ navigation }) {
         </View>
       )}
 
-      <HelpText/>
+      <HelpText />
 
       {/* Bouton de rafraîchissement */}
       <TouchableOpacity style={styles.refreshButton} onPress={loadBalades}>
