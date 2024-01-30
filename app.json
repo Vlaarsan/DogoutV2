@@ -8,8 +8,8 @@
     "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover",
+      "backgroundColor": "#158FC3"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,7 +20,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#333"
+        "backgroundColor": "#158FC3"
       },
       "package": "com.vlaar.Dogout"
     },

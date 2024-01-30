@@ -1,6 +1,5 @@
 // EN DEVELOPPEMNT
 
-
 import React from "react";
 import {
   Modal,
@@ -9,6 +8,7 @@ import {
   TouchableOpacity,
   Image,
   StyleSheet,
+  ScrollView,
 } from "react-native";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -38,7 +38,7 @@ const UserProfileModal = ({ isVisible, onClose, userID }) => {
         setPseudo(profileData.pseudo || "");
         setAvatar(profileData.profilImage);
         setBiographie(profileData.biographie || "");
-        console.log("Profil mis à jour.", dogs);
+        console.log("Profil mis à jour.");
       }
       if (chienDocSnap.exists()) {
         const chienData = chienDocSnap.data();
@@ -64,7 +64,6 @@ const UserProfileModal = ({ isVisible, onClose, userID }) => {
 
   useEffect(() => {
     loadProfileInfo();
-    console.log("ok");
   }, []);
 
   ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -73,109 +72,107 @@ const UserProfileModal = ({ isVisible, onClose, userID }) => {
 
   return (
     <Modal
-    animationType="slide"
-    transparent={true}
-    visible={isVisible}
-    onRequestClose={onClose}
-  >
-    <View style={styles.modalContainer}>
-      <View style={styles.modalContent}>
-        <Text style={styles.modalTitle}>Profil de {pseudo}</Text>
-        <Image source={avatar} style={styles.avatarImage} />
-        <Text style={styles.text}>{biographie}</Text>
+      animationType="slide"
+      transparent={true}
+      visible={isVisible}
+      onRequestClose={onClose}
+    >
+      <ScrollView style={styles.modalContainer}>
+        <View style={styles.modalContent}>
+          <Text style={styles.modalTitle}>Profil de {pseudo}</Text>
+          <Image source={avatar} style={styles.avatarImage} />
+          <Text style={styles.text}>{biographie}</Text>
 
-        <Text style={styles.title}>Ses chiens</Text>
-        {dogs.map((dog, index) => (
-          <Chien
-            key={index}
-            name={dog.name}
-            gender={dog.gender}
-            avatar={dog.avatar}
-            age={dog.age}
-            race={dog.race}
-            color={dog.color}
-            onPress={() => handleDogPress(dog.name)}
-          />
-        ))}
-        
+          <Text style={styles.title}>Ses chiens</Text>
+          {dogs.map((dog, index) => (
+            <Chien
+              key={index}
+              name={dog.name}
+              gender={dog.gender}
+              avatar={dog.avatar}
+              age={dog.age}
+              race={dog.race}
+              color={dog.color}
+              onPress={() => handleDogPress(dog.name)}
+            />
+          ))}
 
-        <TouchableOpacity style={styles.closeButton}
-        onPress={onClose}>
-          <Text style={styles.closeButtonText}>FERMER</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
-  </Modal>
-);
+          <TouchableOpacity style={styles.closeButton} onPress={onClose}>
+            <Text style={styles.closeButtonText}>FERMER</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+    </Modal>
+  );
 };
 
 export default UserProfileModal;
 
 const styles = StyleSheet.create({
-modalContainer: {
-  flex: 1,
-  justifyContent: "center",
-  alignItems: "center",
-},
-modalContent: {
-  backgroundColor: "#111",
-  padding: 20,
-  borderRadius: 10,
-  width: "80%",
-},
-modalTitle: {
-  fontSize: 24,
-  fontWeight: "bold",
-  color: "#158FC3",
-  textAlign: "center",
-  marginBottom: 20,
-},
-avatarImage: {
-  width: 100,
-  height: 100,
-  borderRadius: 50,
-  alignSelf: "center",
-  marginBottom: 10,
-},
-text: {
-  fontSize: 16,
-  color: "white",
-  textAlign: "center",
-  marginBottom: 20,
-},
-modalSubtitle: {
-  fontSize: 20,
-  fontWeight: "bold",
-  color: "#158FC3",
-  textAlign: "center",
-  marginBottom: 10,
-},
-dogContainer: {
-  flexDirection: "row",
-  alignItems: "center",
-  marginBottom: 10,
-},
-dogAvatar: {
-  width: 50,
-  height: 50,
-  borderRadius: 25,
-  marginRight: 10,
-},
-dogName: {
-  fontSize: 18,
-  color: "white",
-},
-closeButton: {
-  backgroundColor: "#158FC3",
-  padding: 10,
-  borderRadius: 10,
-  marginTop: 5,
-  alignSelf: "center",
-},
-closeButtonText: {
-  fontSize: 18,
-  fontWeight: "bold",
-  color: "white",
-  textAlign: "center",
-},
+  modalContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  modalContent: {
+    backgroundColor: "#111",
+    padding: 20,
+    borderRadius: 10,
+    width: "80%",
+  },
+  modalTitle: {
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "#158FC3",
+    textAlign: "center",
+    marginBottom: 20,
+  },
+  avatarImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    alignSelf: "center",
+    marginBottom: 10,
+  },
+  text: {
+    fontSize: 16,
+    color: "white",
+    textAlign: "center",
+    marginBottom: 20,
+  },
+  modalSubtitle: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#158FC3",
+    textAlign: "center",
+    marginBottom: 10,
+  },
+  dogContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 10,
+  },
+  dogAvatar: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    marginRight: 10,
+  },
+  dogName: {
+    fontSize: 18,
+    color: "white",
+  },
+  closeButton: {
+    backgroundColor: "#158FC3",
+    padding: 10,
+    borderRadius: 10,
+    marginTop: 5,
+    alignSelf: "center",
+  },
+  closeButtonText: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "white",
+    textAlign: "center",
+  },
 });
