@@ -438,7 +438,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
-  // Add styles for the modal if you are using one
   modalContent: {
     backgroundColor: "white",
     padding: 20,

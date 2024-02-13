@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "#333", // Couleur de fond
+    backgroundColor: "#333",
     padding: 20,
   },
   header: {
@@ -104,9 +104,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
     textAlign: "center",
-    textShadowColor: "black", // Couleur de l'ombre
-    textShadowOffset: { width: 2, height: 3 }, // Décalage de l'ombre (ajustez les valeurs selon vos préférences)
-    textShadowRadius: 3, // Rayon de l'ombre (ajustez la valeur selon vos préférences)
+    textShadowColor: "black",
+    textShadowOffset: { width: 2, height: 3 },
+    textShadowRadius: 3,
   },
 
   pseudoContainer:{
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     fontSize: 15,
     fontWeight: "bold",
-    color: "#999", // Couleur du texte
+    color: "#999",
   },
   buttonContainer: {
     width: "90%",

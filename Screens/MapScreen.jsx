@@ -646,10 +646,10 @@ const styles = StyleSheet.create({
   },
   // Style pour le carrousel horizontal d'images
   imageCarouselItem: {
-    width: 100, // Largeur de chaque élément de l'image
-    height: 100, // Hauteur de chaque élément de l'image
-    marginHorizontal: 0, // Marge horizontale entre les éléments de l'image
-    borderRadius: 10, // Bord arrondi pour chaque élément de l'image
+    width: 100,
+    height: 100, 
+    marginHorizontal: 0,
+    borderRadius: 10,
   },
 
   containerText: {
@@ -671,7 +671,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     width: "100%",
     marginTop: 20,
-    marginBottom: 20, // Personnalisez la largeur du bouton selon vos besoins
+    marginBottom: 20,
   },
   dropdownButtonText: {
     fontSize: 16,
@@ -679,12 +679,12 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   dropdownRow: {
-    backgroundColor: "#158FC3", // Couleur de fond des éléments de la liste déroulante
+    backgroundColor: "#158FC3",
     padding: 10,
   },
   dropdownRowText: {
     fontSize: 16,
-    color: "white", // Couleur du texte des éléments de la liste déroulante
+    color: "white", 
     textAlign: "center",
   },
   customDefaultButtonTextStyle: {

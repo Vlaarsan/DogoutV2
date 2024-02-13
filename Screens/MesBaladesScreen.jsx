@@ -25,6 +25,7 @@ import { fr } from "date-fns/locale";
 import SelectDropdown from "react-native-select-dropdown";
 import DateTimePickerModal from "react-native-modal-datetime-picker"; // Assurez-vous d'avoir installé cette dépendance
 import DogInfoModal from "../Modals/DogInfoModal";
+import { durations } from "../Constants/Constants";
 
 const MesBaladesScreen = ({ navigation }) => {
   ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -42,22 +43,7 @@ const MesBaladesScreen = ({ navigation }) => {
     duration: "",
     infos: "",
   });
-  const durations = [
-    "Indéterminée",
-    "10 min",
-    "20 min",
-    "30 min",
-    "40 min",
-    "50 min",
-    "1h",
-    "1h30",
-    "2h",
-    "2h30",
-    "3h",
-    "3h30",
-    "4h",
-    "Journée",
-  ];
+
 
   const [infoModalVisible, setInfoModalVisible] = useState(false);
   const [participants, setparticipants] = useState([]);
@@ -466,7 +452,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     width: "100%",
     marginTop: 20,
-    marginBottom: 20, // Personnalisez la largeur du bouton selon vos besoins
+    marginBottom: 20,
   },
   dropdownButtonText: {
     fontSize: 16,
@@ -474,12 +460,12 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   dropdownRow: {
-    backgroundColor: "#158FC3", // Couleur de fond des éléments de la liste déroulante
+    backgroundColor: "#158FC3",
     padding: 10,
   },
   dropdownRowText: {
     fontSize: 16,
-    color: "white", // Couleur du texte des éléments de la liste déroulante
+    color: "white",
     textAlign: "center",
   },
   customDefaultButtonTextStyle: {

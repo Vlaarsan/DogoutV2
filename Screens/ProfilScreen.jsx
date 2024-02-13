@@ -536,15 +536,14 @@ export default function ProfilScreen() {
             rowTextForSelection={(item, index) => {
               return item;
             }}
-            buttonStyle={styles.dropdownButton} // Style du bouton de sélection
+            buttonStyle={styles.dropdownButton}
             buttonTextStyle={[
               styles.dropdownButtonText,
               styles.customDefaultButtonTextStyle,
             ]}
-            // Style du texte du bouton de sélection
-            rowStyle={styles.dropdownRow} // Style de chaque élément de la liste déroulante
+            rowStyle={styles.dropdownRow}
             rowTextStyle={styles.dropdownRowText}
-            defaultButtonText="Race" // Style du texte de chaque élément de la liste déroulante
+            defaultButtonText="Race"
           />
 
           <SelectDropdown
@@ -558,15 +557,15 @@ export default function ProfilScreen() {
             rowTextForSelection={(item, index) => {
               return item;
             }}
-            buttonStyle={styles.dropdownButton} // Style du bouton de sélection
+            buttonStyle={styles.dropdownButton}
             buttonTextStyle={[
               styles.dropdownButtonText,
               styles.customDefaultButtonTextStyle,
             ]}
             // Style du texte du bouton de sélection
-            rowStyle={styles.dropdownRow} // Style de chaque élément de la liste déroulante
+            rowStyle={styles.dropdownRow}
             rowTextStyle={styles.dropdownRowText}
-            defaultButtonText="Couleur" // Style du texte de chaque élément de la liste déroulante
+            defaultButtonText="Couleur"
           />
           <SelectDropdown
             data={ages}
@@ -579,15 +578,14 @@ export default function ProfilScreen() {
             rowTextForSelection={(item, index) => {
               return item;
             }}
-            buttonStyle={styles.dropdownButton} // Style du bouton de sélection
+            buttonStyle={styles.dropdownButton}
             buttonTextStyle={[
               styles.dropdownButtonText,
               styles.customDefaultButtonTextStyle,
             ]}
-            // Style du texte du bouton de sélection
-            rowStyle={styles.dropdownRow} // Style de chaque élément de la liste déroulante
+            rowStyle={styles.dropdownRow}
             rowTextStyle={styles.dropdownRowText}
-            defaultButtonText="Age" // Style du texte de chaque élément de la liste déroulante
+            defaultButtonText="Age"
           />
 
           <SelectDropdown
@@ -601,18 +599,17 @@ export default function ProfilScreen() {
             rowTextForSelection={(item, index) => {
               return item;
             }}
-            buttonStyle={styles.dropdownButton} // Style du bouton de sélection
+            buttonStyle={styles.dropdownButton}
             buttonTextStyle={[
               styles.dropdownButtonText,
               styles.customDefaultButtonTextStyle,
             ]}
-            // Style du texte du bouton de sélection
-            rowStyle={styles.dropdownRow} // Style de chaque élément de la liste déroulante
+            rowStyle={styles.dropdownRow}
             rowTextStyle={styles.dropdownRowText}
-            defaultButtonText="Sexe" // Style du texte de chaque élément de la liste déroulante
+            defaultButtonText="Sexe"
           />
           <Image
-            source={dogImage || require("../assets/images/Logoapp.png")} // Utilisez une image par défaut si la race n'est pas trouvée
+            source={dogImage || require("../assets/images/Logoapp.png")} // Utiliser une image par défaut si la race n'est pas trouvée
             style={styles.avatarImage}
           />
 
@@ -639,8 +636,8 @@ export default function ProfilScreen() {
           {/* Input pour le pseudo */}
           <TextInput
             placeholder="Nouveau pseudo"
-            value={tempPseudo} // Utilisez la valeur temporaire
-            onChangeText={(text) => setTempPseudo(text)} // Mettez à jour la valeur temporaire
+            value={tempPseudo}
+            onChangeText={(text) => setTempPseudo(text)}
             style={styles.inputEdit}
             maxLength={20}
             returnKeyType="done"
@@ -651,21 +648,18 @@ export default function ProfilScreen() {
           <TextInput
             placeholder="Nouvelle biographie"
             value={tempBiographie}
-            onChangeText={(text) => setTempBiographie(text)} // Mettez à jour la valeur temporaire
+            onChangeText={(text) => setTempBiographie(text)}
             style={styles.inputBio}
-            maxLength={150} // Limite de 100 caractères
+            maxLength={150}
             multiline={true}
-            returnKeyType="done" // Ferme le clavier lorsque le bouton "Done" est pressé
+            returnKeyType="done"
             blurOnSubmit={true}
           />
 
           {/* Image de profil */}
           <Text style={styles.modalEditPseudo}>Avatar de profil</Text>
           <TouchableOpacity onPress={toggleEditPpModal}>
-            <Image
-              source={monAvatar} // Remplacez par le chemin de l'image de profil
-              style={styles.editProfileImage}
-            />
+            <Image source={monAvatar} style={styles.editProfileImage} />
           </TouchableOpacity>
 
           {/* Bouton "Enregistrer" */}
@@ -700,8 +694,6 @@ export default function ProfilScreen() {
                 style={styles.avatarItem}
                 onPress={() => {
                   setMonAvatar(avatar);
-                  // Mettez en œuvre la logique pour définir l'avatar ici
-                  // Vous pouvez utiliser l'avatar sélectionné (avatar) pour mettre à jour l'avatar du profil
                   toggleEditPpModal();
                 }}
               >
@@ -726,7 +718,7 @@ export default function ProfilScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#333", // Fond blanc
+    backgroundColor: "#333",
     padding: 20,
   },
   header: {
@@ -744,9 +736,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
     textAlign: "center",
-    textShadowColor: "black", // Couleur de l'ombre
-    textShadowOffset: { width: 2, height: 3 }, // Décalage de l'ombre (ajustez les valeurs selon vos préférences)
-    textShadowRadius: 3, // Rayon de l'ombre (ajustez la valeur selon vos préférences)
+    textShadowColor: "black",
+    textShadowOffset: { width: 2, height: 3 },
+    textShadowRadius: 3,
   },
 
   infoRow: {
@@ -782,7 +774,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     marginTop: 10,
-    alignSelf: "center", // Pour centrer l'image horizontalement
+    alignSelf: "center",
   },
 
   ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -818,9 +810,9 @@ const styles = StyleSheet.create({
   dogsText: {
     fontSize: 25,
     color: "#158FC3",
-    textShadowColor: "black", // Couleur de l'ombre
-    textShadowOffset: { width: 2, height: 3 }, // Décalage de l'ombre (ajustez les valeurs selon vos préférences)
-    textShadowRadius: 3, // Rayon de l'ombre (ajustez la valeur selon vos préférences)
+    textShadowColor: "black",
+    textShadowOffset: { width: 2, height: 3 },
+    textShadowRadius: 3,
   },
   button: {
     backgroundColor: "#158FC3",
@@ -855,7 +847,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     marginBottom: 20,
-    alignSelf: "center", // Pour centrer l'image horizontalement
+    alignSelf: "center",
   },
 
   ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -888,7 +880,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     marginTop: 0,
-    alignSelf: "center", // Pour centrer l'image horizontalement
+    alignSelf: "center",
   },
 
   ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -965,12 +957,12 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   dropdownRow: {
-    backgroundColor: "#158FC3", // Couleur de fond des éléments de la liste déroulante
+    backgroundColor: "#158FC3",
     padding: 10,
   },
   dropdownRowText: {
     fontSize: 18,
-    color: "white", // Couleur du texte des éléments de la liste déroulante
+    color: "white",
     textAlign: "center",
   },
   customDefaultButtonTextStyle: {

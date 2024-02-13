@@ -115,26 +115,25 @@ export default function Chien({
             rowTextForSelection={(item, index) => {
               return item;
             }}
-            buttonStyle={styles.dropdownButton} // Style du bouton de sélection
+            buttonStyle={styles.dropdownButton}
             buttonTextStyle={[
               styles.dropdownButtonText,
               styles.customDefaultButtonTextStyle,
             ]}
-            // Style du texte du bouton de sélection
-            rowStyle={styles.dropdownRow} // Style de chaque élément de la liste déroulante
+            rowStyle={styles.dropdownRow}
             rowTextStyle={styles.dropdownRowText}
-            defaultButtonText={age} // Style du texte de chaque élément de la liste déroulante
+            defaultButtonText={age}
           />
 
           <View style={styles.infoContainer}>
             {gender === "Mâle" ? (
               <Image
-                source={require("../assets/images/male.png")} // Remplacez par l'icône de mâle
+                source={require("../assets/images/male.png")}
                 style={styles.genderIconModal}
               />
             ) : (
               <Image
-                source={require("../assets/images/female.png")} // Remplacez par l'icône de femelle
+                source={require("../assets/images/female.png")}
                 style={styles.genderIconModal}
               />
             )}
@@ -162,7 +161,7 @@ const styles = StyleSheet.create({
   avatar: {
     width: 40,
     height: 40,
-    borderRadius: 50, // Pour rendre l'image circulaire
+    borderRadius: 50,
     marginBottom: 10,
     borderBottomWidth: 2,
   },
@@ -197,9 +196,9 @@ const styles = StyleSheet.create({
     color: "black",
     marginTop: 50,
     marginBottom: 40,
-    textShadowColor: "red", // Couleur de l'ombre
-    textShadowOffset: { width: 2, height: 2 }, // Décalage de l'ombre (ajustez les valeurs selon vos préférences)
-    textShadowRadius: 3, // Rayon de l'ombre (ajustez la valeur selon vos préférences)
+    textShadowColor: "red",
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 3,
   },
   infoContainer: {
     flexDirection: "row",
@@ -240,7 +239,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 25,
     width: "50%",
-    marginBottom: 20, // Personnalisez la largeur du bouton selon vos besoins
+    marginBottom: 20,
   },
   dropdownButtonText: {
     fontWeight: "bold",
@@ -249,12 +248,12 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   dropdownRow: {
-    backgroundColor: "#158FC3", // Couleur de fond des éléments de la liste déroulante
+    backgroundColor: "#158FC3",
     padding: 10,
   },
   dropdownRowText: {
     fontSize: 18,
-    color: "white", // Couleur du texte des éléments de la liste déroulante
+    color: "white",
     textAlign: "center",
   },
 });

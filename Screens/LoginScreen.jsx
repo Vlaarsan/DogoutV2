@@ -187,9 +187,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
     textAlign: "center",
-    textShadowColor: "black", // Couleur de l'ombre
-    textShadowOffset: { width: 4, height: 4 }, // Décalage de l'ombre (ajustez les valeurs selon vos préférences)
-    textShadowRadius: 3, // Rayon de l'ombre (ajustez la valeur selon vos préférences)
+    textShadowColor: "black",
+    textShadowOffset: { width: 4, height: 4 },
+    textShadowRadius: 3,
   },
   imageContainer: {
     marginTop: 20,
@@ -211,27 +211,27 @@ const styles = StyleSheet.create({
     color: "white",
   },
   buttonlog: {
-    backgroundColor: "#158FC3", // Fond bleu
-    borderRadius: 50, // Coins arrondis
-    padding: 10, // Espacement interne
+    backgroundColor: "#158FC3",
+    borderRadius: 50, 
+    padding: 10, 
     width: 250,
-    height: 40, // Largeur du bouton
+    height: 40, 
     alignItems: "center",
     marginBottom: 20,
     textAlign: "center",
   },
   buttonsign: {
-    backgroundColor: "#158FC3", // Fond bleu
-    borderRadius: 50, // Coins arrondis
-    padding: 10, // Espacement interne
-    width: 150, // Largeur du bouton
-    alignItems: "center", // Alignement horizontal au centre
+    backgroundColor: "#158FC3",
+    borderRadius: 50, 
+    padding: 10, 
+    width: 150,
+    alignItems: "center", 
     marginTop: 10,
-    color: "black", // Espacement supérieur
+    color: "black",
   },
   buttonText: {
-    color: "white", // Texte en noir
-    fontWeight: "bold", // Texte en gras
+    color: "white",
+    fontWeight: "bold", 
   },
   errorText: {
     color: "red",

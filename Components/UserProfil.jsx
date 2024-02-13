@@ -64,9 +64,7 @@ const UserProfil = ({ route }) => {
   };
 
   const handleDogPress = (dogName) => {
-    // Logique à exécuter lorsqu'un chien est pressé
     console.log(`Chien pressé : ${dogName}`);
-    // Ajoutez votre logique personnalisée ici
   };
 
   ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -129,14 +127,14 @@ const UserProfil = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#111", // Fond noir
+    backgroundColor: "#111",
     padding: 10,
     marginTop: 50,
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
-    color: "#158FC3", // Couleur bleue
+    color: "#158FC3",
     textAlign: "center",
     marginBottom: 20,
     borderWidth: 1,
@@ -144,7 +142,7 @@ const styles = StyleSheet.create({
     borderColor: "#158FC3",
   },
   content: {
-    backgroundColor: "#444", // Fond gris foncé
+    backgroundColor: "#444",
     padding: 5,
     borderRadius: 15,
   },
