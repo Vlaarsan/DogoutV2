@@ -24,18 +24,18 @@ const MainTabs = () => (
         let iconName;
 
         if (route.name === "Map") {
-          iconName = focused ? "map" : "map-outline"; // Nom de l'icône pour la carte
+          iconName = focused ? "map" : "map-outline";
         } else if (route.name === "Profil") {
-          iconName = focused ? "person" : "person-outline"; // Nom de l'icône pour le profil
+          iconName = focused ? "person" : "person-outline";
         } else if (route.name === "Settings") {
-          iconName = focused ? "aperture" : "aperture-outline"; // Nom de l'icône pour le profil
+          iconName = focused ? "aperture" : "aperture-outline";
         }
 
         return <Icon name={iconName} size={size} color={color} />;
       },
-      tabBarStyle: { backgroundColor: "black" }, // Couleur de fond du TabBar
-      tabBarActiveTintColor: "#158FC3", // Couleur de l'icône active
-      tabBarInactiveTintColor: "#fff", // Couleur de l'icône inactive
+      tabBarStyle: { backgroundColor: "black" },
+      tabBarActiveTintColor: "#158FC3",
+      tabBarInactiveTintColor: "#fff",
     })}
   >
     <Tab.Screen
@@ -68,9 +68,9 @@ export default function App() {
             options={{
               title: "Informations sur la balade",
               headerStyle: {
-                backgroundColor: "#333", // Définissez ici la couleur de fond du header
+                backgroundColor: "#333",
               },
-              headerTintColor: "white", // Définissez ici la couleur de l'écriture du header
+              headerTintColor: "white",
             }}
           />
 
@@ -95,14 +95,14 @@ export default function App() {
             options={{
               headerTitleAlign: "center",
               headerTitleStyle: {
-                color: "#158FC3", // Texte en bleu
+                color: "#158FC3",
                 fontSize: 18,
                 fontWeight: "bold",
               },
               headerStyle: {
-                backgroundColor: "#000", // Fond noir
+                backgroundColor: "#000",
               },
-              headerTintColor: "#158FC3", // Couleur de la flèche de retour
+              headerTintColor: "#158FC3",
             }}
           />
           <Stack.Screen
